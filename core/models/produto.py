@@ -9,13 +9,13 @@ class Produto(models.Model):
         PISTACHE = 3, "Pistache"
     nome = models.CharField(max_length=100)
     # categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name='categorias', null=True, blank=True)
-    categoria = models.ManyToManyField(Categoria, related_name="categorias", blank=True)
+    categoria = models.ManyToManyField(Categoria, related_name="produtos", blank=True)
     descricao = models.CharField(max_length=400)
     tipo = models.IntegerField(choices=Tipo.choices,  default=Tipo.NORMAL)
     validade = models.IntegerField(default=0,blank=True, null=True)
     preco = models.DecimalField(max_digits=7, decimal_places=2, default=0, null=True, blank=True)
     sabor = models.CharField(max_length=100)
-    tamanho = models.ForeignKey(Tamanho, on_delete=models.PROTECT, related_name="tamanhos", null=True, blank=True)
+    tamanho = models.ForeignKey(Tamanho, on_delete=models.PROTECT, related_name="produtos", null=True, blank=True)
     
     
     def __str__(self):
