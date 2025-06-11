@@ -1,6 +1,8 @@
 from django.db import models
 from .categoria import Categoria
 from .tamanho import Tamanho
+from uploader.models import Image
+
 
 class Produto(models.Model):
     class Tipo(models.IntegerChoices):
@@ -16,6 +18,13 @@ class Produto(models.Model):
     preco = models.DecimalField(max_digits=7, decimal_places=2, default=0, null=True, blank=True)
     sabor = models.CharField(max_length=100)
     tamanho = models.ForeignKey(Tamanho, on_delete=models.PROTECT, related_name="produtos", null=True, blank=True)
+    foto = models.ManyToManyField(
+        Image,
+        related_name="produto_foto",
+        null=True,
+        blank=True,
+        default=None,
+    )
     
     
     def __str__(self):
