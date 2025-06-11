@@ -2,7 +2,7 @@ from django.db import models
 from .categoria import Categoria
 
 class PrecoQuantidade(models.Model):
-    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="categorisa", null=True, blank=True)
+    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT, related_name="precosQtds", null=True, blank=True)
     quantidade = models.IntegerField(default=0) 
     preco = models.DecimalField(max_digits=7, decimal_places=2, default=0, null=True, blank=True)
     especial = models.BooleanField(blank=True, null=True)
