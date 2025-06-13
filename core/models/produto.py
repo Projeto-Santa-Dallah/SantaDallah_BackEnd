@@ -21,7 +21,6 @@ class Produto(models.Model):
     foto = models.ManyToManyField(
         Image,
         related_name="produto_foto",
-        null=True,
         blank=True,
         default=None,
     )

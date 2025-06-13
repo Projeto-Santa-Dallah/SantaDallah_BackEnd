@@ -1,0 +1,132 @@
+[
+{
+  "model": "core.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$043iGstWKUEECRaSJtFudV$Lxy5KFG/EOYPJDnmpbcqCM939HI8KbFEFixzffv8h2I=",
+    "last_login": "2025-06-11T22:20:16.946Z",
+    "is_superuser": true,
+    "passage_id": "",
+    "email": "julia@gmail.com",
+    "name": null,
+    "is_active": true,
+    "is_staff": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 1,
+  "fields": {
+    "nome": "Torta",
+    "descricao": "Produto doce a base de farinha com recheios variados."
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 2,
+  "fields": {
+    "nome": "Bolo Decorado",
+    "descricao": "Os bolos decorados são mais altos (entre 12cm / 14cm de altura) e com isso mais pesados, também tem a decoração personalizada. São bem molhadinhos, ótima opção para o seu dia especial A Diferença entre o os bolos da linha vovó Dallah é altura, montagem e estilo de decoração"
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 3,
+  "fields": {
+    "nome": "Brigadeiro",
+    "descricao": "Produto a base de leite condensado e manteiga, podendo ter variados sabores."
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 4,
+  "fields": {
+    "nome": "Bolo Vulcão",
+    "descricao": "bolo com calda"
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 5,
+  "fields": {
+    "nome": "Bolo vovó Dallah",
+    "descricao": "Os bolos da vovó Dallah são mais baixos (duas camadas de recheio) e com decoração tradicional, padrão. Eles podem conter frutas, são bem molhadinhos e claro, uma delicia para qualquer ocasião. A Diferença entre o decorado é altura, montagem e estilo de decoração. Uma linha da Santa Dallah que veio para dar ainda mais doçura e amor."
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 6,
+  "fields": {
+    "nome": "Massa",
+    "descricao": "Sabores da massa do bolo"
+  }
+},
+{
+  "model": "core.categoria",
+  "pk": 7,
+  "fields": {
+    "nome": "Recheio",
+    "descricao": "Sabores de recheio dos bolos vulcões"
+  }
+},
+{
+  "model": "core.tamanho",
+  "pk": 1,
+  "fields": {
+    "nome": "P",
+    "qtdFatia": 6,
+    "massakg": "0.00",
+    "categoria": 1,
+    "formato": "redondo"
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 1,
+  "fields": {
+    "nome": "Banoffi",
+    "descricao": "Base de biscoito com castanha, doce de leite cozido, bananas frescas fatiadas e creme de baunilha",
+    "tipo": 1,
+    "validade": 4,
+    "preco": "75.00",
+    "sabor": "Banana e doce de leite",
+    "tamanho": 1,
+    "categoria": [
+      1
+    ],
+    "foto": [
+      
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 2,
+  "fields": {
+    "nome": "Brigadeiro Tradicional",
+    "descricao": "brigadeiro com chocolate 50% com confeito padrão SPLIT.",
+    "tipo": 1,
+    "validade": 3,
+    "preco": "2.45",
+    "sabor": "Chocolate 50%",
+    "tamanho": null,
+    "categoria": [
+      3,
+      7
+    ],
+    "foto": []
+  }
+},
+{
+  "model": "core.precoquantidade",
+  "pk": 1,
+  "fields": {
+    "categoria": 3,
+    "quantidade": 25,
+    "preco": "65.00",
+    "especial": null
+  }
+}
+]
