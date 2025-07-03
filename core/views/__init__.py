@@ -5,3 +5,4 @@ from .tamanho import TamanhoViewSet
 from .orcamento import OrcamentoViewSet
 from .precoQtd import PrecoQtdViewSet
 from .endereco import EnderecoViewSet
+from .avaliacao import AvaliacaoViewSet
