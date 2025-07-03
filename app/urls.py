@@ -10,10 +10,11 @@ from drf_spectacular.views import (
 from rest_framework.routers import DefaultRouter
 from uploader.router import router as uploader_router
 
-from core.views import UserViewSet, CategoriaViewSet, ProdutoViewSet, TamanhoViewSet, OrcamentoViewSet, PrecoQtdViewSet
+from core.views import UserViewSet, CategoriaViewSet, ProdutoViewSet, TamanhoViewSet, OrcamentoViewSet, PrecoQtdViewSet, EnderecoViewSet
 
 router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet) 
+router.register(r"enderecos", EnderecoViewSet) 
 router.register(r"orcamentos", OrcamentoViewSet) 
 router.register(r"precos-quantidades", PrecoQtdViewSet) 
 router.register(r"produtos", ProdutoViewSet) 

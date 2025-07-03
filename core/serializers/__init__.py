@@ -12,3 +12,4 @@ from .orcamento import OrcamentoRetriveSerializer
 from .precoQtd import PrecoQtdSerializer
 from .precoQtd import PrecoQtdListSerializer
 from .precoQtd import PrecoQtdRetrieveSerializer
+from .endereco import EnderecoSerializer
