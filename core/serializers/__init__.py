@@ -13,3 +13,6 @@ from .precoQtd import PrecoQtdSerializer
 from .precoQtd import PrecoQtdListSerializer
 from .precoQtd import PrecoQtdRetrieveSerializer
 from .endereco import EnderecoSerializer
+from .avaliacao import AvaliacaoSerializer
+from .avaliacao import AvaliacaoListSerializer
+from .avaliacao import AvaliacaoRetriveSerializer
