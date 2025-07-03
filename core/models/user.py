@@ -10,6 +10,8 @@ from django.contrib.auth.models import (
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+from core.models.endereco import Endereco
+
 
 class UserManager(BaseUserManager):
     """Manager for users."""
@@ -43,6 +45,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     passage_id = models.CharField(max_length=255, unique=True, verbose_name=_('passage_id'), help_text=_('Passage ID'))
     email = models.EmailField(max_length=255, unique=True, verbose_name=_('email'), help_text=_('Email'))
     name = models.CharField(max_length=255, blank=True, null=True, verbose_name=_('name'), help_text=_('Username'))
+    endereco = models.ManyToManyField(Endereco,related_name= 'usuarios', blank=True)
     is_active = models.BooleanField(
         default=True, verbose_name=_('Usuário está ativo'), help_text=_('Indica que este usuário está ativo.')
     )

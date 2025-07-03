@@ -4,3 +4,4 @@ from .produto import ProdutoViewSet
 from .tamanho import TamanhoViewSet
 from .orcamento import OrcamentoViewSet
 from .precoQtd import PrecoQtdViewSet
+from .endereco import EnderecoViewSet

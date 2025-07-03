@@ -4,3 +4,4 @@ from .categoria import Categoria
 from .orcamento import Orcamento
 from .tamanho import Tamanho
 from .precoQtd import PrecoQuantidade
+from .endereco import Endereco
