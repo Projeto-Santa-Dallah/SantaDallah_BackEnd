@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from core.models import Categoria, Produto, Pedido,Orcamento,Tamanho, PrecoQuantidade, Endereco, Avaliacao
+from core.models import Categoria, Produto, Pedido,Orcamento,Tamanho, PrecoQuantidade, Endereco, Avaliacao, ItensPedido
 
 
 class UserAdmin(BaseUserAdmin):
@@ -110,6 +110,11 @@ class OrcamentoAdmin(admin.ModelAdmin):
     ordering = ('usuario', 'data')
     list_per_page = 10
     
+    
+class ItensPedidoInline(admin.TabularInline):
+    model = ItensPedido
+    extra = 1 
+    
 @admin.register(Pedido)
 class PedidoAdmin(admin.ModelAdmin):
     list_display = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada')
@@ -117,6 +122,7 @@ class PedidoAdmin(admin.ModelAdmin):
     list_filter = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada')
     ordering = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada')
     list_per_page = 10
+    inlines = [ItensPedidoInline]
     
 
 # admin.site.register(models.User, UserAdmin)
