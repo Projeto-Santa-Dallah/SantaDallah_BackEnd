@@ -16,3 +16,4 @@ from .endereco import EnderecoSerializer
 from .avaliacao import AvaliacaoSerializer
 from .avaliacao import AvaliacaoListSerializer
 from .avaliacao import AvaliacaoRetriveSerializer
+from .pedido import PedidoSerializer, PedidoCreateUpdateSerializer, ItensPedidoCreateUpdateSerializer, ItensPedidoSerializer, PedidoListSerializer, ItensPedidoListSerializer

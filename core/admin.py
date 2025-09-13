@@ -6,9 +6,10 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from core.models import Categoria, Produto, Pedido,Orcamento,Tamanho, PrecoQuantidade, Endereco, Avaliacao, ItensPedido
+from core.models import Categoria, Produto, Pedido,Orcamento,Tamanho, PrecoQuantidade, Endereco, Avaliacao, ItensPedido, User
 
 
+@admin.register(User)
 class UserAdmin(BaseUserAdmin):
     """Define the admin pages for users."""
 
@@ -117,12 +118,18 @@ class ItensPedidoInline(admin.TabularInline):
     
 @admin.register(Pedido)
 class PedidoAdmin(admin.ModelAdmin):
-    list_display = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada')
+    list_display = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada','total_formatado')
     search_fields = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada')
     list_filter = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada')
     ordering = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada')
     list_per_page = 10
     inlines = [ItensPedidoInline]
+    readonly_fields = ("total_formatado",)
+    
+    @admin.display(description="Total")
+    def total_formatado(self, obj):
+        """Exibe R$ 123,45 em vez de 123.45."""
+        return f"R$ {obj.total:.2f}"
     
 
 # admin.site.register(models.User, UserAdmin)
