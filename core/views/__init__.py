@@ -6,3 +6,4 @@ from .orcamento import OrcamentoViewSet
 from .precoQtd import PrecoQtdViewSet
 from .endereco import EnderecoViewSet
 from .avaliacao import AvaliacaoViewSet
+from .pedido import PedidoViewSet

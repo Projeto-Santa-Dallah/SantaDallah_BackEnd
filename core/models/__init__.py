@@ -6,3 +6,4 @@ from .tamanho import Tamanho
 from .precoQtd import PrecoQuantidade
 from .endereco import Endereco
 from .avaliacao import Avaliacao
+from .pedido import Pedido, ItensPedido
