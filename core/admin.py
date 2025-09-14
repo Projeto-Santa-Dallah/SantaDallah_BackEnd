@@ -118,10 +118,10 @@ class ItensPedidoInline(admin.TabularInline):
     
 @admin.register(Pedido)
 class PedidoAdmin(admin.ModelAdmin):
-    list_display = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada','total_formatado')
-    search_fields = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada')
-    list_filter = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada')
-    ordering = ('usuario', 'status', 'data', 'horario_entrega', 'formaDeRetirada')
+    list_display = ('usuario', 'status', 'data_pedido', 'data_criacao' ,'horario_entrega', 'formaDeRetirada','total_formatado')
+    search_fields = ('usuario', 'status', 'data_pedido', 'data_criacao','horario_entrega', 'formaDeRetirada')
+    list_filter = ('usuario', 'status', 'data_pedido','data_criacao', 'horario_entrega', 'formaDeRetirada')
+    ordering = ('usuario', 'status', 'data_pedido', 'data_criacao','horario_entrega', 'formaDeRetirada')
     list_per_page = 10
     inlines = [ItensPedidoInline]
     readonly_fields = ("total_formatado",)

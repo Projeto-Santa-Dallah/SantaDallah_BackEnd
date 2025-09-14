@@ -1,7 +1,9 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 
 from .user import User
 from .produto import Produto
+from datetime import timedelta
 
 class Pedido(models.Model):
     
@@ -16,10 +18,12 @@ class Pedido(models.Model):
 
     usuario = models.ForeignKey(User, on_delete=models.PROTECT, related_name='compras')
     status = models.IntegerField(choices=StatusCompra.choices,  default=StatusCompra.CARRINHO)
-    data = models.DateField (null=True, blank=True)
+    data_criacao = models.DateField(auto_now_add=True, blank=True, null=True)
+    data_pedido = models.DateField (null=True, blank=True)
     horario_entrega = models.TimeField(null=True, blank=True)
     formaDeRetirada = models.IntegerField(choices=FormaDeRetirada.choices, default=FormaDeRetirada.ENTREGA)
     
+ 
     @property
     def total(self):
         # total = 0
@@ -28,6 +32,8 @@ class Pedido(models.Model):
         # return total
         return sum(item.produto.preco * item.quantidade for item in self.itens.all())
     
+   
+ 
 class ItensPedido(models.Model):
     pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE, related_name='itens')
     produto = models.ForeignKey(Produto, on_delete=models.PROTECT, related_name='+')

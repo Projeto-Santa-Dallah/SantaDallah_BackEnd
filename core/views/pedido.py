@@ -5,7 +5,6 @@ from core.serializers import PedidoSerializer, PedidoCreateUpdateSerializer, Ped
 
 
 class PedidoViewSet(ModelViewSet):
-   
     # serializer_class = PedidoSerializer
     
     def get_serializer_class(self):
@@ -16,7 +15,12 @@ class PedidoViewSet(ModelViewSet):
         return PedidoSerializer
     
     def get_queryset(self):
+       
+
         usuario = self.request.user
+        
+        if not usuario.is_authenticated:
+            return Pedido.objects.none()
         if usuario.is_superuser:
             return Pedido.objects.all()
         if usuario.groups.filter(name='admin'):
