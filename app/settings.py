@@ -146,7 +146,7 @@ SPECTACULAR_SETTINGS = {
 AUTH_USER_MODEL = 'core.User'
 
 REST_FRAMEWORK = {
-     'DEFAULT_AUTHENTICATION_CLASSES': ('core.authentication.TokenAuthentication',),
+    'DEFAULT_AUTHENTICATION_CLASSES': ('core.authentication.TokenAuthentication',),
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',),
     'DEFAULT_PAGINATION_CLASS': 'app.pagination.CustomPagination',
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
@@ -155,6 +155,15 @@ REST_FRAMEWORK = {
 
 PASSAGE_APP_ID = os.getenv('PASSAGE_APP_ID', 'app_id')
 PASSAGE_API_KEY = os.getenv('PASSAGE_API_KEY', 'api_key')
-# PASSAGE_AUTH_STRATEGY = 2
+PASSAGE_AUTH_STRATEGY = 2
+
+ADMIN_GROUP_NAME = 'Admin' 
+CLIENTE_GROUP_NAME = 'Cliente' 
+
+ADMIN_EMAILS = [
+    'juliafu713@gmail.com',
+    'isabelli.ifc@gmail.com' 
+]
+
 
 print(f'{MODE = } \n{MEDIA_URL = } \n{DATABASES = }')
