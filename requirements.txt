@@ -57,7 +57,6 @@ scipy==1.15.3
 setuptools==80.9.0
 six==1.17.0
 sqlparse==0.5.3
-theano==1.0.5
 typing-extensions==4.14.0
 typing-inspection==0.4.1
 tzdata==2025.2; sys_platform == "win32"

@@ -11,8 +11,10 @@
     "name": null,
     "is_active": true,
     "is_staff": true,
+    "foto": null,
     "groups": [],
-    "user_permissions": []
+    "user_permissions": [],
+    "endereco": []
   }
 },
 {
@@ -96,9 +98,7 @@
     "categoria": [
       1
     ],
-    "foto": [
-      
-    ]
+    "foto": []
   }
 },
 {
