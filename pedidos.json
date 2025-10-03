@@ -1,0 +1,206 @@
+[
+{
+  "model": "core.pedido",
+  "pk": 1,
+  "fields": {
+    "usuario": 1,
+    "status": 2,
+    "data_criacao": null,
+    "data_pedido": "2025-04-24",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 1
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 2,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": null,
+    "data_pedido": null,
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 3,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": null,
+    "data_pedido": null,
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 4,
+  "fields": {
+    "usuario": 1,
+    "status": 1,
+    "data_criacao": null,
+    "data_pedido": "2025-09-14",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 1
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 5,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": null,
+    "data_pedido": "2025-09-15",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 6,
+  "fields": {
+    "usuario": 1,
+    "status": 1,
+    "data_criacao": null,
+    "data_pedido": "2025-09-13",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 1
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 7,
+  "fields": {
+    "usuario": 1,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-13",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 1
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 8,
+  "fields": {
+    "usuario": 1,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-13",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 9,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-13",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 10,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-13",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 11,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": null,
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 12,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-17",
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 13,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-14",
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 14,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-14",
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 15,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-14",
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 16,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-17",
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 17,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-15",
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+}
+]

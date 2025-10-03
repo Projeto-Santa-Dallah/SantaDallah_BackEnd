@@ -162,7 +162,8 @@ CLIENTE_GROUP_NAME = 'Cliente'
 
 ADMIN_EMAILS = [
     'juliafu713@gmail.com',
-    'isabelli.ifc@gmail.com' 
+    'isabelli.ifc@gmail.com',
+    'marco.mendes@ifc.edu.br'
 ]
 
 
