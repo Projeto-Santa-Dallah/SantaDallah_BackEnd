@@ -8,7 +8,7 @@ class Orcamento(models.Model):
     qtnPessoas = models.IntegerField(default=0,null=True, blank=True)
     local = models.CharField(max_length=10,null=True, blank=True)
     bebidaAlcoolica = models.BooleanField(null=True, blank=True)
-    docinhos = models.BooleanField(null=True, blank=True)
+    sobremesa = models.BooleanField(null=True, blank=True)
     foto = models.ManyToManyField(
         Image,
         related_name="orcamento_foto",
