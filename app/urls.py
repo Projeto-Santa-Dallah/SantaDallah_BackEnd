@@ -11,7 +11,7 @@ from rest_framework.routers import DefaultRouter
 from uploader.router import router as uploader_router
 
 from core.views import UserViewSet, CategoriaViewSet, ProdutoViewSet, TamanhoViewSet, OrcamentoViewSet, PrecoQtdViewSet, EnderecoViewSet, AvaliacaoViewSet, PedidoViewSet
-
+from core.views.email.envioEmail import EnviarEmailAPIView
 router = DefaultRouter()
 router.register(r"avaliacoes", AvaliacaoViewSet) 
 router.register(r"categorias", CategoriaViewSet) 
@@ -40,6 +40,8 @@ urlpatterns = [
     path("api/media/", include(uploader_router.urls)),
     # API
     path('api/', include(router.urls)),
+    path('api/send-email/', EnviarEmailAPIView.as_view(), name='envio_email_api'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_ENDPOINT, document_root=settings.MEDIA_ROOT)
