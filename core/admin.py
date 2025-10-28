@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
 
-from core.models import Categoria, Produto, Pedido,Orcamento,Tamanho, PrecoQuantidade, Endereco, Avaliacao, ItensPedido, User
+from core.models import Categoria, Produto, Pedido,Orcamento,Tamanho, PrecoQuantidade, Endereco, Avaliacao, ItensPedido, User, ProdutoTamanho
 
 
 @admin.register(User)
@@ -59,13 +59,24 @@ class CategoriaAdmin(admin.ModelAdmin):
     ordering = ('nome', 'descricao')
     list_per_page = 10
     
+class ProdutoTamanhoInline(admin.TabularInline):
+    model = ProdutoTamanho
+    extra = 1  # quantos campos extras aparecem por padrão
+    
 @admin.register(Produto)
 class ProdutoAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'listar_categorias', 'tipo')
+    list_display = ('nome', 'tipo', 'sabor', 'tem_tamanhos')
+    inlines = [ProdutoTamanhoInline]
     search_fields = ('nome', 'categoria__nome')
     list_filter = ('categoria',)
     ordering = ('nome',)
     list_per_page = 10
+
+
+    def tem_tamanhos(self, obj):
+        return obj.tamanhos.exists()
+    tem_tamanhos.boolean = True
+    tem_tamanhos.short_description = "Tem tamanhos?"
 
     def listar_categorias(self, obj):
         return ", ".join([c.nome for c in obj.categoria.all()])
@@ -73,7 +84,7 @@ class ProdutoAdmin(admin.ModelAdmin):
     
 @admin.register(Tamanho)
 class TamanhoAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'qtdFatia', 'massakg')
+    list_display = ('nome', 'qtdFatia', 'massakg', 'categoria', 'formato')
     search_fields = ('nome', 'qtdFatia', 'massakg')
     list_filter = ('nome', 'qtdFatia', 'massakg')
     ordering =  ('nome', 'qtdFatia', 'massakg')

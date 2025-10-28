@@ -2,62 +2,75 @@ from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer, SlugRelatedField
 from uploader.models import Image
 from uploader.serializers import ImageSerializer
-from core.models import Produto, Categoria, Tamanho, PrecoQuantidade
+from core.models import Produto, Categoria, Tamanho, PrecoQuantidade, ProdutoTamanho
+
+
+class ProdutoTamanhoSerializer(serializers.ModelSerializer):
+    tamanho_nome = serializers.CharField(source="tamanho.nome", read_only=True)
+    preco = serializers.DecimalField(max_digits=7, decimal_places=2, read_only=True)
+
+    class Meta:
+        model = ProdutoTamanho
+        fields = ["id", "tamanho_nome", "preco"]
 
 
 class ProdutoListSerializer(ModelSerializer):
     foto_url = serializers.SerializerMethodField()
     preco = serializers.SerializerMethodField()
+    tamanhos = ProdutoTamanhoSerializer(
+        source="produtotamanho_set", many=True, read_only=True
+    )
 
     class Meta:
         model = Produto
-        fields = ("id", "nome", "preco", "sabor", "foto_url", "preco")
+        fields = ["id", "nome", "sabor", "tamanhos", "foto_url", "preco"]
 
     def get_foto_url(self, obj):
         if obj.foto.exists():
-            return obj.foto.first().url  
+            return obj.foto.first().url
         return None
 
     def get_preco(self, obj):
         request = self.context.get("request")
         quantidade = request.query_params.get("quantidade")
+        categorias = obj.categoria.all()
 
-     
-        is_brigadeiro = obj.categoria.filter(nome__iexact="Brigadeiro").exists()
-        if not is_brigadeiro:
-            return obj.preco 
+        # Se não for brigadeiro, pega o menor preço dos tamanhos
+        if not obj.categoria.filter(nome__iexact="Brigadeiro").exists():
+            produtos_tamanhos = obj.produtotamanho_set.all()
+            if produtos_tamanhos.exists():
+                return float(produtos_tamanhos.order_by("preco").first().preco)
+            return 0
 
+        # Se for brigadeiro
         if not quantidade:
-            categorias = obj.categoria.all()
             precos_categoria = PrecoQuantidade.objects.filter(categoria__in=categorias)
             if precos_categoria.exists():
-                return float(precos_categoria.order_by('quantidade').first().preco)
-            return obj.preco or 0
+                return float(precos_categoria.order_by("quantidade").first().preco)
+            return 0
 
         try:
             quantidade = int(quantidade)
         except ValueError:
-            raise serializers.ValidationError({"quantidade": "Deve ser um número inteiro."})
+            raise serializers.ValidationError(
+                {"quantidade": "Deve ser um número inteiro."}
+            )
 
         if quantidade < 25:
-            raise serializers.ValidationError({"quantidade": "O pedido mínimo é 25 brigadeiros."})
-
+            raise serializers.ValidationError(
+                {"quantidade": "O pedido mínimo é 25 brigadeiros."}
+            )
         if quantidade % 25 != 0:
-            raise serializers.ValidationError({"quantidade": "A quantidade deve ser múltipla de 25 (25,50,75,100...)."})
+            raise serializers.ValidationError(
+                {"quantidade": "A quantidade deve ser múltipla de 25."}
+            )
 
-
-        categorias = obj.categoria.all()
         precos_categoria = PrecoQuantidade.objects.filter(categoria__in=categorias)
-
-        precos_map = {pq.quantidade: pq.preco for pq in precos_categoria if pq.quantidade in [25,50,100]}
-
-        for base in [25,50,100]:
-            if base not in precos_map:
-                raise serializers.ValidationError({f"preco_{base}": f"Não há preço cadastrado para {base} brigadeiros."})
+        precos_map = {pq.quantidade: pq.preco for pq in precos_categoria}
 
         total = 0
         restante = quantidade
-        for bloco in [100,50,25]:
+        for bloco in sorted(precos_map.keys(), reverse=True):
             while restante >= bloco:
                 total += precos_map[bloco]
                 restante -= bloco
@@ -67,6 +80,9 @@ class ProdutoListSerializer(ModelSerializer):
 
 class ProdutoRetrieveSerializer(ModelSerializer):
     foto = ImageSerializer(many=True, required=False)
+    tamanhos = ProdutoTamanhoSerializer(
+        source="produtotamanho_set", many=True, read_only=True
+    )
 
     class Meta:
         model = Produto
@@ -84,7 +100,32 @@ class ProdutoSerializer(ModelSerializer):
         write_only=True,
     )
     foto = ImageSerializer(many=True, required=False, read_only=True)
+    tamanhos = ProdutoTamanhoSerializer(
+        source="produtotamanho_set", many=True, read_only=True
+    )
 
     class Meta:
         model = Produto
         fields = "__all__"
+
+    def validate(self, data):
+
+        instance = getattr(self, "instance", None)
+
+        # checa se existem tamanhos na instancia (edição) ou no novo dado (criação)
+        tamanhos_existentes = instance.tamanhos.exists() if instance else False
+        tamanhos_novos = data.get("tamanhos", None)
+        has_tamanhos = tamanhos_existentes or (
+            tamanhos_novos is not None and len(tamanhos_novos) > 0
+        )
+
+        if has_tamanhos and data.get("preco"):
+            raise serializers.ValidationError(
+                "Produtos com tamanhos não devem ter preço direto."
+            )
+        if not has_tamanhos and not data.get("preco"):
+            raise serializers.ValidationError(
+                "Produtos sem tamanhos precisam ter preço direto."
+            )
+
+        return data
