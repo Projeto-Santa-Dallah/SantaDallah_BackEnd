@@ -1,2 +1,855 @@
+[
 
-[{"model": "uploader.image", "pk": 1, "fields": {"attachment_key": "1572cf7b-cafe-464b-8fb8-8a5455dd42dd", "public_id": "acb03471-b2f0-454e-8483-1f3303141d0d", "file": "media/images/acb03471-b2f0-454e-8483-1f3303141d0d_hedopr", "description": "Torta Banoffi", "uploaded_on": "2025-06-11T22:19:09.551Z"}}, {"model": "uploader.image", "pk": 2, "fields": {"attachment_key": "1b793774-4e39-4299-80ce-a1c4633c6dd1", "public_id": "95dfe915-5e89-4a53-bc08-3c09a7795661", "file": "images/95dfe915-5e89-4a53-bc08-3c09a7795661.png", "description": "questao", "uploaded_on": "2025-06-13T19:04:26.251Z"}}, {"model": "uploader.image", "pk": 3, "fields": {"attachment_key": "c54c5eb6-224e-4804-9803-3fdea64c6343", "public_id": "1c04e9b3-b4a2-42e2-bd2f-b632ad3d9985", "file": "images/1c04e9b3-b4a2-42e2-bd2f-b632ad3d9985.jpg", "description": "O morro dos ventos uivantes", "uploaded_on": "2025-06-13T19:14:18.243Z"}}, {"model": "uploader.image", "pk": 4, "fields": {"attachment_key": "bf1b6f12-f485-4b6c-9864-c7730763d8fc", "public_id": "7e9d3280-1c09-4d43-8fc6-6c429f24b1f4", "file": "media/images/7e9d3280-1c09-4d43-8fc6-6c429f24b1f4_qwj85n", "description": "O morro dos ventos uivantes", "uploaded_on": "2025-06-13T19:17:01.903Z"}}, {"model": "uploader.image", "pk": 5, "fields": {"attachment_key": "7a8e74aa-9b97-45e1-ac9d-e71a03a807de", "public_id": "11dd6a29-3e44-4943-9ec3-4f4107fe8287", "file": "media/images/11dd6a29-3e44-4943-9ec3-4f4107fe8287_ww7dvy", "description": "Brigadeiro Tradicional", "uploaded_on": "2025-06-13T19:46:56.145Z"}}, {"model": "uploader.image", "pk": 6, "fields": {"attachment_key": "eae81148-2b43-4691-8774-f1591c9759f2", "public_id": "d7e39f7d-7aa3-4656-bdeb-a83e6f30cd2f", "file": "media/images/d7e39f7d-7aa3-4656-bdeb-a83e6f30cd2f_f3act0", "description": "", "uploaded_on": "2025-09-18T22:55:24.665Z"}}, {"model": "uploader.image", "pk": 7, "fields": {"attachment_key": "ab55f2d5-31e8-4c83-9bb4-0fda7cee22dd", "public_id": "c7baf832-15bb-4260-9066-a066fdf26174", "file": "media/images/c7baf832-15bb-4260-9066-a066fdf26174_c7bxpp", "description": "", "uploaded_on": "2025-09-19T21:26:31.974Z"}}, {"model": "uploader.image", "pk": 8, "fields": {"attachment_key": "7300e745-d7e5-430e-bb14-628db97691a8", "public_id": "4713ea3a-9b74-4968-a980-b410848d4e62", "file": "media/images/4713ea3a-9b74-4968-a980-b410848d4e62_f2txgj", "description": "", "uploaded_on": "2025-09-19T21:26:44.615Z"}}, {"model": "uploader.image", "pk": 9, "fields": {"attachment_key": "dbd88c8a-2602-4bb5-80fc-d657c1336a9f", "public_id": "ce0173fd-2718-4c35-ad1f-6c65d50df862", "file": "media/images/ce0173fd-2718-4c35-ad1f-6c65d50df862_hqgizs", "description": "", "uploaded_on": "2025-09-23T12:39:57.564Z"}}, {"model": "core.endereco", "pk": 1, "fields": {"cep": "18899899", "estado": "AL", "cidade": "Maceio", "bairro": "Vila lalau", "logradouro": "avenida lala", "numero": 22, "complemento": "Casa"}}, {"model": "core.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$1000000$043iGstWKUEECRaSJtFudV$Lxy5KFG/EOYPJDnmpbcqCM939HI8KbFEFixzffv8h2I=", "last_login": "2025-09-12T17:36:26.954Z", "is_superuser": true, "passage_id": "", "email": "julia@gmail.com", "name": null, "is_active": true, "is_staff": true, "foto": null, "groups": [], "user_permissions": [], "endereco": []}}, {"model": "core.user", "pk": 2, "fields": {"password": "!aX8Gm97gSkSrcJ4YnLULNhHIWXSsUEv2EiNe3sz1", "last_login": null, "is_superuser": false, "passage_id": "ZuNtW2zyjmctgxLgSK5DNIy6", "email": "juliaifc22@gmail.com", "name": null, "is_active": true, "is_staff": false, "foto": null, "groups": [3], "user_permissions": [], "endereco": []}}, {"model": "core.user", "pk": 3, "fields": {"password": "!9lpGaP3KpxkDJhOxsvq5vjSM0FyltOHdxZ0byVAB", "last_login": null, "is_superuser": true, "passage_id": "88CeLaDamU2yi2ZVdLmV5ZPi", "email": "juliafu713@gmail.com", "name": "julia", "is_active": true, "is_staff": true, "foto": 9, "groups": [4], "user_permissions": [], "endereco": []}}, {"model": "core.categoria", "pk": 1, "fields": {"nome": "Torta", "descricao": "Produto doce a base de farinha com recheios variados."}}, {"model": "core.categoria", "pk": 2, "fields": {"nome": "Bolo Decorado", "descricao": "Os bolos decorados são mais altos (entre 12cm / 14cm de altura) e com isso mais pesados, também tem a decoração personalizada. São bem molhadinhos, ótima opção para o seu dia especial A Diferença entre o os bolos da linha vovó Dallah é altura, montagem e estilo de decoração"}}, {"model": "core.categoria", "pk": 3, "fields": {"nome": "Brigadeiro", "descricao": "Produto a base de leite condensado e manteiga, podendo ter variados sabores."}}, {"model": "core.categoria", "pk": 4, "fields": {"nome": "Bolo Vulcão", "descricao": "bolo com calda"}}, {"model": "core.categoria", "pk": 5, "fields": {"nome": "Bolo vovó Dallah", "descricao": "Os bolos da vovó Dallah são mais baixos (duas camadas de recheio) e com decoração tradicional, padrão. Eles podem conter frutas, são bem molhadinhos e claro, uma delicia para qualquer ocasião. A Diferença entre o decorado é altura, montagem e estilo de decoração. Uma linha da Santa Dallah que veio para dar ainda mais doçura e amor."}}, {"model": "core.categoria", "pk": 6, "fields": {"nome": "Massa", "descricao": "Sabores da massa do bolo"}}, {"model": "core.categoria", "pk": 7, "fields": {"nome": "Recheio", "descricao": "Sabores de recheio dos bolos vulcões"}}, {"model": "core.tamanho", "pk": 1, "fields": {"nome": "P", "qtdFatia": 6, "massakg": "0.00", "categoria": 1, "formato": "redondo"}}, {"model": "core.produto", "pk": 1, "fields": {"nome": "Banoffi", "descricao": "Base de biscoito com castanha, doce de leite cozido, bananas frescas fatiadas e creme de baunilha", "tipo": 1, "validade": 4, "preco": "75.00", "sabor": "Banana e doce de leite", "tamanho": 1, "categoria": [1], "foto": [1]}}, {"model": "core.produto", "pk": 2, "fields": {"nome": "Brigadeiro Tradicional", "descricao": "brigadeiro com chocolate 50% com confeito padrão SPLIT.", "tipo": 1, "validade": 3, "preco": "2.45", "sabor": "Chocolate 50%", "tamanho": null, "categoria": [3, 7], "foto": [5]}}, {"model": "core.precoquantidade", "pk": 1, "fields": {"categoria": 3, "quantidade": 25, "preco": "65.00", "especial": null}}, {"model": "core.avaliacao", "pk": 1, "fields": {"usuario": 1, "produto": 1, "nota": 5, "comentario": "Muito Saboroso", "data": "2025-07-03T02:05:28Z", "foto": [1]}}, {"model": "core.pedido", "pk": 1, "fields": {"usuario": 1, "status": 2, "data_criacao": null, "data_pedido": "2025-04-24", "horario_entrega": "15:00:00", "formaDeRetirada": 1}}, {"model": "core.pedido", "pk": 2, "fields": {"usuario": 2, "status": 1, "data_criacao": null, "data_pedido": null, "horario_entrega": null, "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 3, "fields": {"usuario": 2, "status": 1, "data_criacao": null, "data_pedido": null, "horario_entrega": null, "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 4, "fields": {"usuario": 1, "status": 1, "data_criacao": null, "data_pedido": "2025-09-14", "horario_entrega": "15:00:00", "formaDeRetirada": 1}}, {"model": "core.pedido", "pk": 5, "fields": {"usuario": 2, "status": 1, "data_criacao": null, "data_pedido": "2025-09-15", "horario_entrega": "15:00:00", "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 6, "fields": {"usuario": 1, "status": 1, "data_criacao": null, "data_pedido": "2025-09-13", "horario_entrega": "15:00:00", "formaDeRetirada": 1}}, {"model": "core.pedido", "pk": 7, "fields": {"usuario": 1, "status": 1, "data_criacao": "2025-09-13", "data_pedido": "2025-09-13", "horario_entrega": "15:00:00", "formaDeRetirada": 1}}, {"model": "core.pedido", "pk": 8, "fields": {"usuario": 1, "status": 1, "data_criacao": "2025-09-13", "data_pedido": "2025-09-13", "horario_entrega": "15:00:00", "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 9, "fields": {"usuario": 2, "status": 1, "data_criacao": "2025-09-13", "data_pedido": "2025-09-13", "horario_entrega": "15:00:00", "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 10, "fields": {"usuario": 2, "status": 1, "data_criacao": "2025-09-13", "data_pedido": "2025-09-13", "horario_entrega": "15:00:00", "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 11, "fields": {"usuario": 2, "status": 1, "data_criacao": "2025-09-13", "data_pedido": null, "horario_entrega": null, "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 12, "fields": {"usuario": 2, "status": 1, "data_criacao": "2025-09-13", "data_pedido": "2025-09-17", "horario_entrega": null, "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 13, "fields": {"usuario": 2, "status": 1, "data_criacao": "2025-09-13", "data_pedido": "2025-09-14", "horario_entrega": null, "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 14, "fields": {"usuario": 2, "status": 1, "data_criacao": "2025-09-13", "data_pedido": "2025-09-14", "horario_entrega": null, "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 15, "fields": {"usuario": 2, "status": 1, "data_criacao": "2025-09-13", "data_pedido": "2025-09-14", "horario_entrega": null, "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 16, "fields": {"usuario": 2, "status": 1, "data_criacao": "2025-09-13", "data_pedido": "2025-09-17", "horario_entrega": null, "formaDeRetirada": 2}}, {"model": "core.pedido", "pk": 17, "fields": {"usuario": 2, "status": 1, "data_criacao": "2025-09-13", "data_pedido": "2025-09-15", "horario_entrega": null, "formaDeRetirada": 2}}, {"model": "core.itenspedido", "pk": 1, "fields": {"pedido": 1, "produto": 1, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 3, "fields": {"pedido": 2, "produto": 1, "quantidade": 2}}, {"model": "core.itenspedido", "pk": 4, "fields": {"pedido": 3, "produto": 2, "quantidade": 2}}, {"model": "core.itenspedido", "pk": 5, "fields": {"pedido": 4, "produto": 2, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 6, "fields": {"pedido": 5, "produto": 1, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 7, "fields": {"pedido": 6, "produto": 1, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 8, "fields": {"pedido": 7, "produto": 2, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 9, "fields": {"pedido": 8, "produto": 2, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 10, "fields": {"pedido": 9, "produto": 1, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 11, "fields": {"pedido": 10, "produto": 1, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 12, "fields": {"pedido": 11, "produto": 2, "quantidade": 2}}, {"model": "core.itenspedido", "pk": 13, "fields": {"pedido": 12, "produto": 1, "quantidade": 2}}, {"model": "core.itenspedido", "pk": 14, "fields": {"pedido": 12, "produto": 2, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 15, "fields": {"pedido": 13, "produto": 1, "quantidade": 2}}, {"model": "core.itenspedido", "pk": 16, "fields": {"pedido": 13, "produto": 2, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 17, "fields": {"pedido": 14, "produto": 1, "quantidade": 2}}, {"model": "core.itenspedido", "pk": 18, "fields": {"pedido": 14, "produto": 2, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 19, "fields": {"pedido": 15, "produto": 1, "quantidade": 2}}, {"model": "core.itenspedido", "pk": 20, "fields": {"pedido": 15, "produto": 2, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 21, "fields": {"pedido": 16, "produto": 1, "quantidade": 2}}, {"model": "core.itenspedido", "pk": 22, "fields": {"pedido": 16, "produto": 2, "quantidade": 1}}, {"model": "core.itenspedido", "pk": 23, "fields": {"pedido": 17, "produto": 1, "quantidade": 2}}, {"model": "core.itenspedido", "pk": 24, "fields": {"pedido": 17, "produto": 2, "quantidade": 1}}]
+
+{
+  "model": "uploader.image",
+  "pk": 2,
+  "fields": {
+    "attachment_key": "1b793774-4e39-4299-80ce-a1c4633c6dd1",
+    "public_id": "95dfe915-5e89-4a53-bc08-3c09a7795661",
+    "file": "images/95dfe915-5e89-4a53-bc08-3c09a7795661.png",
+    "description": "questao",
+    "uploaded_on": "2025-06-13T19:04:26.251Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 3,
+  "fields": {
+    "attachment_key": "c54c5eb6-224e-4804-9803-3fdea64c6343",
+    "public_id": "1c04e9b3-b4a2-42e2-bd2f-b632ad3d9985",
+    "file": "images/1c04e9b3-b4a2-42e2-bd2f-b632ad3d9985.jpg",
+    "description": "O morro dos ventos uivantes",
+    "uploaded_on": "2025-06-13T19:14:18.243Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 4,
+  "fields": {
+    "attachment_key": "bf1b6f12-f485-4b6c-9864-c7730763d8fc",
+    "public_id": "7e9d3280-1c09-4d43-8fc6-6c429f24b1f4",
+    "file": "media/images/7e9d3280-1c09-4d43-8fc6-6c429f24b1f4_qwj85n",
+    "description": "O morro dos ventos uivantes",
+    "uploaded_on": "2025-06-13T19:17:01.903Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 6,
+  "fields": {
+    "attachment_key": "eae81148-2b43-4691-8774-f1591c9759f2",
+    "public_id": "d7e39f7d-7aa3-4656-bdeb-a83e6f30cd2f",
+    "file": "media/images/d7e39f7d-7aa3-4656-bdeb-a83e6f30cd2f_f3act0",
+    "description": "",
+    "uploaded_on": "2025-09-18T22:55:24.665Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 7,
+  "fields": {
+    "attachment_key": "ab55f2d5-31e8-4c83-9bb4-0fda7cee22dd",
+    "public_id": "c7baf832-15bb-4260-9066-a066fdf26174",
+    "file": "media/images/c7baf832-15bb-4260-9066-a066fdf26174_c7bxpp",
+    "description": "",
+    "uploaded_on": "2025-09-19T21:26:31.974Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 8,
+  "fields": {
+    "attachment_key": "7300e745-d7e5-430e-bb14-628db97691a8",
+    "public_id": "4713ea3a-9b74-4968-a980-b410848d4e62",
+    "file": "media/images/4713ea3a-9b74-4968-a980-b410848d4e62_f2txgj",
+    "description": "",
+    "uploaded_on": "2025-09-19T21:26:44.615Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 9,
+  "fields": {
+    "attachment_key": "dbd88c8a-2602-4bb5-80fc-d657c1336a9f",
+    "public_id": "ce0173fd-2718-4c35-ad1f-6c65d50df862",
+    "file": "media/images/ce0173fd-2718-4c35-ad1f-6c65d50df862_hqgizs",
+    "description": "",
+    "uploaded_on": "2025-09-23T12:39:57.564Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 10,
+  "fields": {
+    "attachment_key": "de5ebfc4-d0f8-491d-8be3-37f6faca1fa7",
+    "public_id": "e01468a0-2895-4d97-9ee4-1849d0595e8f",
+    "file": "media/images/e01468a0-2895-4d97-9ee4-1849d0595e8f_aqyjxf",
+    "description": "bolo de casamento",
+    "uploaded_on": "2025-10-28T19:15:30.597Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 11,
+  "fields": {
+    "attachment_key": "4c4e9972-9b75-4e3f-a0e6-fe6c0e3cf6d9",
+    "public_id": "a7352371-25fc-458c-96c4-e2bb49afc12e",
+    "file": "media/images/a7352371-25fc-458c-96c4-e2bb49afc12e_sykvsv",
+    "description": "Bolo de três brigadeiros,",
+    "uploaded_on": "2025-10-28T19:17:30.850Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 12,
+  "fields": {
+    "attachment_key": "9e7f8e5b-020e-478b-9267-ed5a2f1bb313",
+    "public_id": "11ade7eb-f86a-4c11-9561-bcf7674b1a3a",
+    "file": "media/images/11ade7eb-f86a-4c11-9561-bcf7674b1a3a_neoqo0",
+    "description": "brigadeiro",
+    "uploaded_on": "2025-10-28T19:18:26.314Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 13,
+  "fields": {
+    "attachment_key": "bf13b589-3b95-45a4-a7fd-78d2d4f66817",
+    "public_id": "daf36fe1-b9ba-468c-82b8-107bfdd420e9",
+    "file": "media/images/daf36fe1-b9ba-468c-82b8-107bfdd420e9_heu2du",
+    "description": "bolo vulcao chocolate",
+    "uploaded_on": "2025-10-28T19:19:57.878Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 14,
+  "fields": {
+    "attachment_key": "79243cb9-1ebc-4a7b-acde-f33ab042aa0e",
+    "public_id": "7a68d10c-9740-425a-a5e8-550afa26bd07",
+    "file": "media/images/7a68d10c-9740-425a-a5e8-550afa26bd07_w7g8gb",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T19:44:48.113Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 15,
+  "fields": {
+    "attachment_key": "b93ce3a2-e71b-488f-83b9-87ec77078bea",
+    "public_id": "d3b0e2fa-ea05-43a9-9010-57db22132110",
+    "file": "media/images/d3b0e2fa-ea05-43a9-9010-57db22132110_mh0qn5",
+    "description": "bolo de casamento",
+    "uploaded_on": "2025-10-28T19:49:48.462Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 16,
+  "fields": {
+    "attachment_key": "a3dd6e06-186f-48a5-b0de-d8bb12887275",
+    "public_id": "5b04140a-64c3-4903-9aa1-9f8166db1466",
+    "file": "media/images/5b04140a-64c3-4903-9aa1-9f8166db1466_qxjxgs",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T19:50:31.047Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 17,
+  "fields": {
+    "attachment_key": "f725d4e9-14c4-435f-b45a-34f3b73b18d2",
+    "public_id": "2c88e8fe-5468-4e44-9930-aa56db8b9d6d",
+    "file": "media/images/2c88e8fe-5468-4e44-9930-aa56db8b9d6d_vi5ucd",
+    "description": "bolo de casamento",
+    "uploaded_on": "2025-10-28T19:51:07.209Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 18,
+  "fields": {
+    "attachment_key": "b988b6a0-a3bd-4751-8361-11598dc2e5b2",
+    "public_id": "df8af193-f875-4eb9-8c26-8b82ec6f1a67",
+    "file": "media/images/df8af193-f875-4eb9-8c26-8b82ec6f1a67_uifpdz",
+    "description": "bolo de casamento",
+    "uploaded_on": "2025-10-28T19:51:45.612Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 19,
+  "fields": {
+    "attachment_key": "316d9d48-d33b-4ec2-8112-782b467f9700",
+    "public_id": "e614fafd-c2c2-4d34-b822-74982be76500",
+    "file": "media/images/e614fafd-c2c2-4d34-b822-74982be76500_rwj5jj",
+    "description": "bolo de casamento",
+    "uploaded_on": "2025-10-28T19:53:13.359Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 20,
+  "fields": {
+    "attachment_key": "d5deb455-167d-4337-8451-b535667af83d",
+    "public_id": "1298b9da-41cb-4b21-b874-aa78c219409a",
+    "file": "media/images/1298b9da-41cb-4b21-b874-aa78c219409a_dgk5em",
+    "description": "bolo de casamento",
+    "uploaded_on": "2025-10-28T19:54:04.952Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 22,
+  "fields": {
+    "attachment_key": "7f4cc86c-df47-47ca-9607-460fe9010a68",
+    "public_id": "8c9b6de5-7120-4ca6-a1a0-912a3cf5462b",
+    "file": "media/images/8c9b6de5-7120-4ca6-a1a0-912a3cf5462b_uf29vp",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T19:56:49.540Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 23,
+  "fields": {
+    "attachment_key": "acc3a7ad-8310-4487-a18a-fdaef8fb694a",
+    "public_id": "c8e396e8-dba1-4036-bbbc-b78bc2dfcf90",
+    "file": "media/images/c8e396e8-dba1-4036-bbbc-b78bc2dfcf90_lsqbk4",
+    "description": "torta",
+    "uploaded_on": "2025-10-28T20:02:03.294Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 24,
+  "fields": {
+    "attachment_key": "51212319-ce32-4ee6-86c5-45d4f99fcdec",
+    "public_id": "9bcda77e-6c09-4066-aa2c-968a6ec286a0",
+    "file": "media/images/9bcda77e-6c09-4066-aa2c-968a6ec286a0_g12war",
+    "description": "torta",
+    "uploaded_on": "2025-10-28T20:02:20.595Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 25,
+  "fields": {
+    "attachment_key": "27febb24-6462-46d3-bbbf-d69b37601753",
+    "public_id": "551861c8-c092-4762-8fcb-9b5eea8553df",
+    "file": "media/images/551861c8-c092-4762-8fcb-9b5eea8553df_i2noej",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T20:03:52.563Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 26,
+  "fields": {
+    "attachment_key": "d9596b97-2fe7-4abe-b002-c99aeaa6a370",
+    "public_id": "7bfd868b-1174-4b3e-b24a-088319a1c24c",
+    "file": "media/images/7bfd868b-1174-4b3e-b24a-088319a1c24c_xwvt19",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T20:07:30.783Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 27,
+  "fields": {
+    "attachment_key": "50c0904e-86ca-4af4-aef0-d14f9eac3ae7",
+    "public_id": "ffde91bc-c24a-4062-a082-36b5d06e16f1",
+    "file": "media/images/ffde91bc-c24a-4062-a082-36b5d06e16f1_h0cg7p",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T20:10:00.086Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 28,
+  "fields": {
+    "attachment_key": "b07b9b42-d2ad-48e8-bbd4-6bbeeb183066",
+    "public_id": "7f37f647-d982-4b71-a740-a4849116d812",
+    "file": "media/images/7f37f647-d982-4b71-a740-a4849116d812_dgftye",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T20:10:11.272Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 29,
+  "fields": {
+    "attachment_key": "25ab9ea6-e5bc-46f4-a0b2-91ae071731d8",
+    "public_id": "51b115ab-9cf2-4b35-a6bd-8314ead18203",
+    "file": "media/images/51b115ab-9cf2-4b35-a6bd-8314ead18203_cer5gc",
+    "description": "bolo casamento",
+    "uploaded_on": "2025-10-28T20:10:27.735Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 30,
+  "fields": {
+    "attachment_key": "f076e93d-adb2-44df-b5d0-003e94d9df78",
+    "public_id": "83006857-85f6-40dc-8bca-8dab98e12c06",
+    "file": "media/images/83006857-85f6-40dc-8bca-8dab98e12c06_qpl5i1",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T20:10:39.808Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 31,
+  "fields": {
+    "attachment_key": "7b4716d0-5c4a-45ee-8c18-37b332ec9513",
+    "public_id": "ef5ac0de-2c97-4562-b495-67d5b7535310",
+    "file": "media/images/ef5ac0de-2c97-4562-b495-67d5b7535310_vmaidk",
+    "description": "torta",
+    "uploaded_on": "2025-10-28T20:13:49.597Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 32,
+  "fields": {
+    "attachment_key": "e1416091-71a1-4b98-a16a-aaf5075fdb8b",
+    "public_id": "6191d1b7-95d3-498b-bec5-6c40172681ad",
+    "file": "media/images/6191d1b7-95d3-498b-bec5-6c40172681ad_usj9ru",
+    "description": "brigadeiro",
+    "uploaded_on": "2025-10-28T20:14:00.794Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 33,
+  "fields": {
+    "attachment_key": "ebd7c43e-3c6a-43db-924d-b80f632e47a5",
+    "public_id": "fa0f1006-546d-481c-99b2-197cac52e4a1",
+    "file": "media/images/fa0f1006-546d-481c-99b2-197cac52e4a1_kfks63",
+    "description": "torta",
+    "uploaded_on": "2025-10-28T20:54:11.800Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 34,
+  "fields": {
+    "attachment_key": "dc6ca3de-d9d1-450b-b899-68502ed3eeab",
+    "public_id": "33ab0908-5f6d-441d-9e23-0d7651018a11",
+    "file": "media/images/33ab0908-5f6d-441d-9e23-0d7651018a11_zra96t",
+    "description": "torta",
+    "uploaded_on": "2025-10-28T20:54:21.795Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 35,
+  "fields": {
+    "attachment_key": "5f113924-04a9-4620-b658-17edcd15bab4",
+    "public_id": "60b1d2c6-03a0-479c-a1a1-09b35a755bd0",
+    "file": "media/images/60b1d2c6-03a0-479c-a1a1-09b35a755bd0_ggk0w7",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T20:55:12.413Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 36,
+  "fields": {
+    "attachment_key": "ddf7ee17-91a5-47a8-b7a2-8e82fa5b1fcc",
+    "public_id": "970b4c75-91ed-42da-8d58-338687f6cf36",
+    "file": "media/images/970b4c75-91ed-42da-8d58-338687f6cf36_b4aiae",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T20:57:17.490Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 37,
+  "fields": {
+    "attachment_key": "06299802-cac7-4880-aa59-77fdeffe0fde",
+    "public_id": "8f8ee033-e632-4c0b-a9eb-9995845b6ded",
+    "file": "media/images/8f8ee033-e632-4c0b-a9eb-9995845b6ded_zb6jon",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T20:58:00.564Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 38,
+  "fields": {
+    "attachment_key": "8264ac05-f05b-40bb-a30e-383625f22063",
+    "public_id": "b96b0b2c-93a5-4556-8999-6309446be298",
+    "file": "media/images/b96b0b2c-93a5-4556-8999-6309446be298_idpwmw",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T20:58:13.566Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 39,
+  "fields": {
+    "attachment_key": "1cc536f4-3aeb-4421-8047-65886dbdd983",
+    "public_id": "8d944d2c-3e74-477f-9684-09047bde2ea3",
+    "file": "media/images/8d944d2c-3e74-477f-9684-09047bde2ea3_eqvtqg",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:01:06.256Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 40,
+  "fields": {
+    "attachment_key": "d58d61a2-64cf-4cfc-855a-5b5617a89c01",
+    "public_id": "d0234fad-1fdf-4f9c-8712-25faef4ed8b2",
+    "file": "media/images/d0234fad-1fdf-4f9c-8712-25faef4ed8b2_wqhtn6",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:01:18.591Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 41,
+  "fields": {
+    "attachment_key": "46a3d1ea-5eb3-4075-8f06-14fcb74209e4",
+    "public_id": "bd1095bd-72cf-4939-b52a-bd4db09a28c8",
+    "file": "media/images/bd1095bd-72cf-4939-b52a-bd4db09a28c8_x4cwde",
+    "description": "brigadeiro",
+    "uploaded_on": "2025-10-28T22:02:19.157Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 42,
+  "fields": {
+    "attachment_key": "c5ae9451-1bf2-4ac6-8f1a-f05f8c24ecf3",
+    "public_id": "24c51397-8bcd-4637-a3ed-55bd91728801",
+    "file": "media/images/24c51397-8bcd-4637-a3ed-55bd91728801_d8ccfn",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:02:30.424Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 43,
+  "fields": {
+    "attachment_key": "c9944038-ed10-4286-ba46-a4d776f1c6ad",
+    "public_id": "4cabea9a-30a4-4cd3-8b12-369ec8fe0526",
+    "file": "media/images/4cabea9a-30a4-4cd3-8b12-369ec8fe0526_urundi",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:02:55.395Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 45,
+  "fields": {
+    "attachment_key": "2860fe1b-76c6-44ea-9e91-f2c9a4c17946",
+    "public_id": "c881226c-3f0d-4103-afc0-519699c7eeea",
+    "file": "media/images/c881226c-3f0d-4103-afc0-519699c7eeea_dz1drr",
+    "description": "bolo de casamento",
+    "uploaded_on": "2025-10-28T22:05:08.535Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 46,
+  "fields": {
+    "attachment_key": "46e2d3d0-5ded-4ae0-8093-f1b25103fe51",
+    "public_id": "a5d22db7-9049-486b-8752-855b226d13c7",
+    "file": "media/images/a5d22db7-9049-486b-8752-855b226d13c7_bjn83v",
+    "description": "torta",
+    "uploaded_on": "2025-10-28T22:06:19.746Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 47,
+  "fields": {
+    "attachment_key": "4b4fe15b-09e7-400e-a70b-5f747653a289",
+    "public_id": "d95b19b9-5a35-4e4c-b3a4-6e6a35a5fa2d",
+    "file": "media/images/d95b19b9-5a35-4e4c-b3a4-6e6a35a5fa2d_aevlwz",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:15:58.302Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 48,
+  "fields": {
+    "attachment_key": "e6584c2c-22ef-479c-ac74-34d9bcee711d",
+    "public_id": "3aad9952-aede-4bfa-a4dd-f7c411420fd2",
+    "file": "media/images/3aad9952-aede-4bfa-a4dd-f7c411420fd2_mweov6",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:16:34.530Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 49,
+  "fields": {
+    "attachment_key": "a6a4282c-790b-469a-a9a6-a482b721d8f9",
+    "public_id": "e80b9da7-47c6-4ab6-9cfb-18f445586cac",
+    "file": "media/images/e80b9da7-47c6-4ab6-9cfb-18f445586cac_y33fjx",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:16:43.222Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 50,
+  "fields": {
+    "attachment_key": "33563eed-7fc9-42d9-94b3-5e4cb2b7ebe1",
+    "public_id": "f5eeca4f-69d3-428b-a16a-8dacd0da5ac0",
+    "file": "media/images/f5eeca4f-69d3-428b-a16a-8dacd0da5ac0_rueqg8",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:16:52.859Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 51,
+  "fields": {
+    "attachment_key": "52bc1f96-29d5-4c7c-9123-03e2a21aaa44",
+    "public_id": "ef94b737-74ec-4024-9297-af30cf79a871",
+    "file": "media/images/ef94b737-74ec-4024-9297-af30cf79a871_wwz8ej",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:17:01.656Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 52,
+  "fields": {
+    "attachment_key": "1e8a9052-a3f5-476a-af12-034b5a7a1054",
+    "public_id": "db0c137f-6552-47e6-9162-f7752a9ecb10",
+    "file": "media/images/db0c137f-6552-47e6-9162-f7752a9ecb10_qxzhoj",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:17:11.027Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 53,
+  "fields": {
+    "attachment_key": "70a4cdb7-16d6-4114-9e6d-65755208c19a",
+    "public_id": "2050256a-c0f9-454f-bd4d-9b99f4069127",
+    "file": "media/images/2050256a-c0f9-454f-bd4d-9b99f4069127_b3ilik",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:17:20.301Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 54,
+  "fields": {
+    "attachment_key": "9081b4e4-470a-41f6-a3a2-807bcab9aec1",
+    "public_id": "2d83d569-4716-47fa-81e5-aed7649f1d2a",
+    "file": "media/images/2d83d569-4716-47fa-81e5-aed7649f1d2a_dl6et9",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:17:31.785Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 55,
+  "fields": {
+    "attachment_key": "00f7d4c7-501e-44a2-9dc2-c9867877025f",
+    "public_id": "033adbc8-dc43-4e7b-9762-1b1b581dce71",
+    "file": "media/images/033adbc8-dc43-4e7b-9762-1b1b581dce71_y6gony",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:17:43.539Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 56,
+  "fields": {
+    "attachment_key": "68f7e59d-cc8c-4102-bb0e-e57f8fcff694",
+    "public_id": "0d3f35db-062f-4017-8eaa-fc6bc76bbafe",
+    "file": "media/images/0d3f35db-062f-4017-8eaa-fc6bc76bbafe_qxzyqk",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:17:54.811Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 57,
+  "fields": {
+    "attachment_key": "576de8b7-be9f-4bd7-b403-a41302a589ae",
+    "public_id": "90fe4481-b448-435c-a51e-89851436a3e3",
+    "file": "media/images/90fe4481-b448-435c-a51e-89851436a3e3_uauugg",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:18:06.791Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 58,
+  "fields": {
+    "attachment_key": "83fa56e3-0459-49c9-b171-838b6962df2d",
+    "public_id": "0017f17f-9d5f-41f0-9530-0f1f642dcc1e",
+    "file": "media/images/0017f17f-9d5f-41f0-9530-0f1f642dcc1e_lrcdej",
+    "description": "bolo decorado",
+    "uploaded_on": "2025-10-28T22:18:15.802Z"
+  }
+},
+
+
+
+
+{
+  "model": "core.tamanho",
+  "pk": 1,
+  "fields": {
+    "nome": "P",
+    "qtdFatia": 6,
+    "massakg": "0.00",
+    "categoria": 1,
+    "formato": "redondo"
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 1,
+  "fields": {
+    "nome": "Banoffi",
+    "descricao": "Base de biscoito com castanha, doce de leite cozido, bananas frescas fatiadas e creme de baunilha",
+    "tipo": 1,
+    "validade": 4,
+    "sabor": "Banana e doce de leite",
+    "categoria": [
+      1
+    ],
+    "foto": [
+      34
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 2,
+  "fields": {
+    "nome": "Brigadeiro Tradicional",
+    "descricao": "brigadeiro com chocolate 50% com confeito padrão SPLIT.",
+    "tipo": 1,
+    "validade": 3,
+    "sabor": "Chocolate 50%",
+    "categoria": [
+      3,
+      7
+    ],
+    "foto": [
+      12
+    ]
+  }
+},
+{
+  "model": "core.produto",
+  "pk": 3,
+  "fields": {
+    "nome": "julia",
+    "descricao": "linda",
+    "tipo": 2,
+    "validade": 2,
+    "sabor": "Chocolate 50%",
+    "categoria": [
+      2
+    ],
+    "foto": [
+      8
+    ]
+  }
+},
+{
+  "model": "core.produtotamanho",
+  "pk": 1,
+  "fields": {
+    "produto": 3,
+    "tamanho": 1,
+    "preco": "30.00"
+  }
+},
+{
+  "model": "core.produtotamanho",
+  "pk": 2,
+  "fields": {
+    "produto": 1,
+    "tamanho": 1,
+    "preco": "30.00"
+  }
+},
+{
+  "model": "core.precoquantidade",
+  "pk": 1,
+  "fields": {
+    "categoria": 3,
+    "quantidade": 25,
+    "preco": "65.00",
+    "especial": null
+  }
+},
+{
+  "model": "core.avaliacao",
+  "pk": 1,
+  "fields": {
+    "usuario": 1,
+    "produto": 1,
+    "nota": 5,
+    "comentario": "Muito Saboroso",
+    "data": "2025-07-03T02:05:28Z",
+    "foto": []
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 1,
+  "fields": {
+    "usuario": 1,
+    "status": 2,
+    "data_criacao": null,
+    "data_pedido": "2025-04-24",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 1
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 2,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": null,
+    "data_pedido": null,
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 5,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": null,
+    "data_pedido": "2025-09-15",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 6,
+  "fields": {
+    "usuario": 1,
+    "status": 1,
+    "data_criacao": null,
+    "data_pedido": "2025-09-13",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 1
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 9,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-13",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 10,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-13",
+    "horario_entrega": "15:00:00",
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 12,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-17",
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 16,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-17",
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+{
+  "model": "core.pedido",
+  "pk": 17,
+  "fields": {
+    "usuario": 2,
+    "status": 1,
+    "data_criacao": "2025-09-13",
+    "data_pedido": "2025-09-15",
+    "horario_entrega": null,
+    "formaDeRetirada": 2
+  }
+},
+
+{
+  "model": "core.itenspedido",
+  "pk": 1,
+  "fields": {
+    "pedido": 1,
+    "produto": 1,
+    "produto_tamanho": 1,
+    "quantidade": 1
+  }
+},
+{
+  "model": "core.itenspedido",
+  "pk": 3,
+  "fields": {
+    "pedido": 2,
+    "produto": 1,
+    "produto_tamanho": 1,
+    "quantidade": 2
+  }
+},
+{
+  "model": "core.itenspedido",
+  "pk": 6,
+  "fields": {
+    "pedido": 5,
+    "produto": 1,
+    "produto_tamanho": 1,
+    "quantidade": 1
+  }
+},
+{
+  "model": "core.itenspedido",
+  "pk": 7,
+  "fields": {
+    "pedido": 6,
+    "produto": 1,
+    "produto_tamanho": 1,
+    "quantidade": 1
+  }
+}
+
+]

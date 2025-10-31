@@ -61,8 +61,7 @@ class CategoriaAdmin(admin.ModelAdmin):
     
 class ProdutoTamanhoInline(admin.TabularInline):
     model = ProdutoTamanho
-    extra = 1  # quantos campos extras aparecem por padrão
-    
+    extra = 1  
 @admin.register(Produto)
 class ProdutoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'tipo', 'sabor', 'tem_tamanhos')
@@ -137,11 +136,18 @@ class PedidoAdmin(admin.ModelAdmin):
     inlines = [ItensPedidoInline]
     readonly_fields = ("total_formatado",)
     
-    @admin.display(description="Total")
     def total_formatado(self, obj):
-        """Exibe R$ 123,45 em vez de 123.45."""
-        return f"R$ {obj.total:.2f}"
-    
+        total = 0
+        for item in obj.itens.all():
+            if hasattr(item, 'produto_tamanho') and item.produto_tamanho is not None:
+                total += item.produto_tamanho.preco * item.quantidade
+            elif hasattr(item.produto, 'preco') and item.produto.preco is not None:
+                total += item.produto.preco * item.quantidade
+            else:
+                total += 0  
+        return f"R$ {total:.2f}"
+
+    total_formatado.short_description = 'Total'
 
 # admin.site.register(models.User, UserAdmin)
 # admin.site.register(models.Categoria)
