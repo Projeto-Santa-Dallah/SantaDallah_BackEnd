@@ -17,9 +17,7 @@ class ProdutoTamanhoSerializer(serializers.ModelSerializer):
 class ProdutoListSerializer(ModelSerializer):
     foto_url = serializers.SerializerMethodField()
     preco = serializers.SerializerMethodField()
-    tamanhos = ProdutoTamanhoSerializer(
-        source="produtotamanho_set", many=True, read_only=True
-    )
+    tamanhos = ProdutoTamanhoSerializer(source="produto_tamanho", many=True, read_only=True)
 
     class Meta:
         model = Produto
@@ -82,9 +80,8 @@ class ProdutoListSerializer(ModelSerializer):
 
 class ProdutoRetrieveSerializer(ModelSerializer):
     foto = ImageSerializer(many=True, required=False)
-    tamanhos = ProdutoTamanhoSerializer(
-        source="produtotamanho_set", many=True, read_only=True
-    )
+    tamanhos = ProdutoTamanhoSerializer(source="produto_tamanho", many=True, read_only=True)
+
 
     class Meta:
         model = Produto
@@ -102,9 +99,8 @@ class ProdutoSerializer(ModelSerializer):
         write_only=True,
     )
     foto = ImageSerializer(many=True, required=False, read_only=True)
-    tamanhos = ProdutoTamanhoSerializer(
-        source="produtotamanho_set", many=True, read_only=True
-    )
+    tamanhos = ProdutoTamanhoSerializer(source="produto_tamanho", many=True, read_only=True)
+
 
     class Meta:
         model = Produto
