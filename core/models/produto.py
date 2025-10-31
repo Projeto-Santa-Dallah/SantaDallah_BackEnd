@@ -32,8 +32,8 @@ class Produto(models.Model):
 
 
 class ProdutoTamanho(models.Model):
-    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
-    tamanho = models.ForeignKey(Tamanho, on_delete=models.PROTECT)
+    produto = models.ForeignKey(Produto, on_delete=models.PROTECT, related_name="produto_tamanho")
+    tamanho = models.ForeignKey(Tamanho, on_delete=models.PROTECT, related_name="tamanho_produto")
     preco = models.DecimalField(max_digits=7, decimal_places=2)
 
     class Meta:

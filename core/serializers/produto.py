@@ -31,19 +31,26 @@ class ProdutoListSerializer(ModelSerializer):
         return None
 
     def get_preco(self, obj):
+        """
+        Retorna o preço do produto:
+        - Se tiver tamanhos, retorna None (os preços estão em 'tamanhos').
+        - Se for brigadeiro, calcula com base na quantidade.
+        """
+ 
+        if obj.tamanhos.exists():
+            return None
+
         request = self.context.get("request")
         quantidade = request.query_params.get("quantidade")
         categorias = obj.categoria.all()
 
-        # Se não for brigadeiro, pega o menor preço dos tamanhos
+
         if not obj.categoria.filter(nome__iexact="Brigadeiro").exists():
-            produtos_tamanhos = obj.produtotamanho_set.all()
-            if produtos_tamanhos.exists():
-                return float(produtos_tamanhos.order_by("preco").first().preco)
             return 0
 
-        # Se for brigadeiro
+  
         if not quantidade:
+    
             precos_categoria = PrecoQuantidade.objects.filter(categoria__in=categorias)
             if precos_categoria.exists():
                 return float(precos_categoria.order_by("quantidade").first().preco)
@@ -52,19 +59,14 @@ class ProdutoListSerializer(ModelSerializer):
         try:
             quantidade = int(quantidade)
         except ValueError:
-            raise serializers.ValidationError(
-                {"quantidade": "Deve ser um número inteiro."}
-            )
+            raise serializers.ValidationError({"quantidade": "Deve ser um número inteiro."})
 
         if quantidade < 25:
-            raise serializers.ValidationError(
-                {"quantidade": "O pedido mínimo é 25 brigadeiros."}
-            )
+            raise serializers.ValidationError({"quantidade": "O pedido mínimo é 25 brigadeiros."})
         if quantidade % 25 != 0:
-            raise serializers.ValidationError(
-                {"quantidade": "A quantidade deve ser múltipla de 25."}
-            )
+            raise serializers.ValidationError({"quantidade": "A quantidade deve ser múltipla de 25."})
 
+    
         precos_categoria = PrecoQuantidade.objects.filter(categoria__in=categorias)
         precos_map = {pq.quantidade: pq.preco for pq in precos_categoria}
 
@@ -112,7 +114,7 @@ class ProdutoSerializer(ModelSerializer):
 
         instance = getattr(self, "instance", None)
 
-        # checa se existem tamanhos na instancia (edição) ou no novo dado (criação)
+      
         tamanhos_existentes = instance.tamanhos.exists() if instance else False
         tamanhos_novos = data.get("tamanhos", None)
         has_tamanhos = tamanhos_existentes or (
